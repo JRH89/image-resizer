@@ -5,8 +5,11 @@ module.exports = {
   rebuildConfig: {},
   makers: [
     {
-      name: '@electron-forge/maker-squirrel',
-      config: {},
+      name: '@electron-forge/maker-zip',
+      platforms: ['win32'], // For Windows
+      config: {
+        // Configure options for the ZIP maker if needed
+      },
     },
     {
       name: '@electron-forge/maker-zip',
@@ -27,4 +30,4 @@ module.exports = {
       config: {},
     },
   ],
-};
+}

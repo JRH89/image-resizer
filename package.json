@@ -4,6 +4,24 @@
   "version": "1.0.0",
   "description": "App for resizing images",
   "main": "main.js",
+  "build": {
+  "productName": "Image Resizer",
+  "appId": "com.imageresizer",
+  "directories": {
+    "output": "dist"
+  },
+  "win": {
+    "target": [
+      "nsis", 
+      "portable"
+    ],
+    "icon": "./renderer/images/icon.ico"
+  },
+  "mac": {
+    "target": "dmg", 
+    "icon": "path/to/your/icon.icns"
+  }
+},
   "scripts": {
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,6 +49,7 @@
     "@electron-forge/maker-squirrel": "^6.4.1",
     "@electron-forge/maker-zip": "^6.4.1",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.1",
-    "electron": "^26.1.0"
+    "electron": "^26.1.0",
+    "electron-builder": "^24.6.4"
   }
 }
